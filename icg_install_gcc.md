@@ -102,4 +102,20 @@ gccとXcodeのバグ？でglsample2以降をコンパイルするとエラーが
 
 
 
+もしくは
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+```
+
+を消して、
+
+```c
+#include <cstdio>
+#include <cstdlib>
+```
+
+に変更してください。
+
 参考：https://qiita.com/wawawa/items/50c2c612b0937f28d92b

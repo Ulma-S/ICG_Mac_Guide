@@ -118,4 +118,21 @@ gccとXcodeのバグ？でglsample2以降をコンパイルするとエラーが
 
 に変更してください。
 
-参考：https://qiita.com/wawawa/items/50c2c612b0937f28d92b
+---
+
+### 参考
+
+vscode等で編集していると、
+
+'glBegin' is deprecated: first deprecated in macOS 10.14 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+
+このようなメッセージが出る場合があります。
+
+これはOpenGLが今のMacでは非推奨なので警告してくれているのですが、正直見づらいだけと思うかもしれません。
+
+その場合は以下の一文をソースファイルの上部に挿入しておくと警告を非表示にできます。
+
+```c
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+```
+

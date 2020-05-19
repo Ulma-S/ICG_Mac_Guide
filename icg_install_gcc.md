@@ -87,6 +87,19 @@ export PATH=$PATH:/usr/local/bin
 
 これで一通り終了です。お疲れ様でした！
 
+---
+
+## 注意
+
+gccとXcodeのバグ？でglsample2以降をコンパイルするとエラーが出ると思います。
+
+これを回避するためにソースファイルの上部に以下を追加するようにしてください。
+
+```c
+#define __OSX_AVAILABLE_STARTING(...)
+#define __OSX_AVAILABLE_BUT_DEPRECATED_MSG(...)
+```
+
 
 
 参考：https://qiita.com/wawawa/items/50c2c612b0937f28d92b

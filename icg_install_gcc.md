@@ -49,6 +49,9 @@ brew install gcc
 
 ```sh
 ls /usr/local/bin | grep gcc
+```
+
+```sh
 ls /usr/local/bin | grep g++
 ```
 
@@ -58,6 +61,9 @@ gcc-9などが一覧で表示されていると思います。
 
 ```sh
 ln -s /usr/local/bin/gcc-9 /usr/local/bin/gcc
+```
+
+```sh
 ln -s /usr/local/bin/g++-9 /usr/local/bin/g++
 ```
 
